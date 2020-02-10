@@ -1,0 +1,65 @@
+package ${package}.impl;
+
+import java.lang.Long;
+import java.util.List;
+
+import ${package}.entity.${className};
+import ${package}.mapper.${className}Mapper;
+import ${package}.service.${className}Service;
+import ${package}.response.PageResult;
+import ${package}.request.Page;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+/**
+ * ${comments}
+ * @author : ${author}
+ * @email : ${email}
+ * @since : ${datetime}
+ * @version : v1.0.0
+ */
+@Service
+public class ${className}ServiceImpl implements ${className}Service{
+
+    @Autowired
+    private ${className}Mapper ${classname}Mapper;
+
+    @Override
+    public long insert(${className} ${classname}) {
+        long flag = ${classname}Mapper.insert(${classname});
+        return flag;
+    }
+
+    @Override
+    public long delete(Long id) {
+        return ${classname}Mapper.delete(id);
+    }
+
+    @Override
+    public long update(${className} ${classname}) {
+        return ${classname}Mapper.update(${classname});
+    }
+
+    @Override
+    public ${className} queryByPrimaryKey(Long ${pk.attrname}){
+        return ${classname}Mapper.queryByPrimaryKey(${pk.attrname});
+    }
+
+    @Override
+    public List<${className}> query(${className} ${classname}){
+        return ${classname}Mapper.query(${classname});
+    }
+
+    @Override
+    public PageResult<${className}> queryPage(${className} ${classname}, Page pageQuery) {
+        //计算下标
+        int startIndex = (pageQuery.getStart() - 1) * pageQuery.getLimit();
+        List<${className}> list = ${classname}Mapper.queryPage(startIndex, pageQuery.getLimit(), ${classname});
+        long count = ${classname}Mapper.queryPageCount(${classname});
+        PageResult pageResult = new PageResult();
+        pageResult.setRows(list);
+        pageResult.setTotal(count);
+        return pageResult;
+    }
+}

@@ -1,0 +1,31 @@
+package ${package}.service;
+
+import java.lang.Long;
+import java.util.List;
+
+import ${package}.entity.${className};
+import ${package}.response.PageResult;
+import ${package}.request.Page;
+
+/**
+* ${comments}
+* @author : ${author}
+* @email : ${email}
+* @since : ${datetime}
+* @version : v1.0.0
+*/
+public interface ${className}Service {
+
+    long insert(${className} ${classname});
+
+    long delete(Long ${pk.attrname});
+
+    long update(${className} ${classname});
+
+    ${className} queryByPrimaryKey(Long ${pk.attrname});
+
+    List<${className}> query(${className} ${classname});
+
+    PageResult<${className}> queryPage(${className} ${classname}, Page pageQuery);
+
+}

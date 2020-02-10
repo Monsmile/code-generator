@@ -1,0 +1,33 @@
+package ${package}.mapper;
+
+import java.lang.Long;
+import java.util.List;
+
+import ${package}.entity.${className};
+import org.springframework.stereotype.Repository;
+import org.apache.ibatis.annotations.Param;
+
+/**
+ * ${comments}
+ * @author : ${author}
+ * @email : ${email}
+ * @since : ${datetime}
+ * @version : v1.0.0
+ */
+@Repository
+public interface  ${className}Mapper {
+
+    long insert(${className} ${classname});
+
+    long delete(Long ${pk.attrname});
+
+    long update(${className} ${classname});
+
+    ${className} queryByPrimaryKey(Long ${pk.attrname});
+
+    List<${className}> query(${className} ${classname});
+
+    List<${className}> queryPage(@Param("startIndex") int startIndex, @Param("limit") int limit, @Param("${classname}") ${className} ${classname});
+
+    long queryPageCount(${className} ${classname});
+}

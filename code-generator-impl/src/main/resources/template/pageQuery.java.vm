@@ -1,0 +1,26 @@
+package ${package}.entity;
+
+import java.io.Serializable;
+
+import lombok.Getter;
+import lombok.Setter;
+
+/**
+ * ${comments}
+ * @author : ${author}
+ * @email : ${email}
+ * @since : ${datetime}
+ * @version : v1.0.0
+ */
+@Getter
+@Setter
+public class Page implements Serializable {
+    private static final long serialVersionUID = 1L;
+
+    //页码
+    private int start = 1;
+
+    //每页多少条
+    private int limit = 10;
+
+}

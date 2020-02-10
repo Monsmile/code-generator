@@ -1,0 +1,25 @@
+package ${package}.impl;
+
+import java.lang.Long;
+import java.util.List;
+
+import ${package}.entity.${className};
+import ${package}.service.${className}Service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ * ${comments}
+ * @author : ${author}
+ * @email : ${email}
+ * @since : ${datetime}
+ * @version : v1.0.0
+ */
+@RestController
+public class ${className}Controller {
+
+    @Autowired
+    private ${className}Service ${classname}Service;
+
+}
