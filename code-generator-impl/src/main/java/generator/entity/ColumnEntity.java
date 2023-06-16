@@ -1,5 +1,6 @@
 package generator.entity;
 
+
 public class ColumnEntity {
 
     //列名

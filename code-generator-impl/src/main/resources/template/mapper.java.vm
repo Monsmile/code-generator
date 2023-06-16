@@ -15,7 +15,7 @@ import org.apache.ibatis.annotations.Param;
  * @version : v1.0.0
  */
 @Repository
-public interface  ${className}Mapper {
+public interface ${className}Mapper {
 
     long insert(${className} ${classname});
 
